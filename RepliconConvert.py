@@ -64,7 +64,7 @@ dict_of_days_off_and_total = count_days(days_off_list,total_day_list)
 
 ############################  Create the new CSV file #######################
 
-month_dict = {v: k for k,v in enumerate(calendar.month_name)}
+month_dict = {month_name: month_number for month_number, month_name in enumerate(calendar.month_name)}
 output_file.write("004, %s, %s \n" % (total_day_list[1][4].rstrip(),month_dict[total_day_list[1][3]]))
 
 for d in dict_of_days_off_and_total:
